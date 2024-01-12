@@ -1,0 +1,180 @@
+{% layout 'base.liquid' %}
+
+{% block content %}
+  <form
+    action="/"
+    method="post"
+    id="form">
+    <div class="panel">
+
+      <div class="panel-numbers">
+        <h1 class="tittle">PARÓQUIA SÃO JUDAS TADEU</h1>
+        <div class="row row-b">
+          <div class="col">
+            <h1 class="col-1">
+              B
+            </h1>
+          </div>
+          {% for i in (1..15) %}
+            <div class="col">
+              <label><input
+                  type="checkbox"
+                  disabled
+                  onclick="document.getElementById('form').submit()"
+                  name="sorted"
+                  value="{{i}}"><span {% if i | hasNumber: listnumber.rows %}style="background-color: #008037; color: #F8B737"{% endif %}>{{ i }}</span>
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="row row-i">
+          <div class="col">
+            <h1 class="col-1">
+              I
+            </h1>
+          </div>
+          {% for i in (16..30) %}
+            <div class="col">
+              <label><input
+                  type="checkbox"
+                  disabled
+                  onclick="document.getElementById('form').submit()"
+                  name="sorted"
+                  value="{{i}}"><span {% if i | hasNumber: listnumber.rows %}style="background-color: #008037; color: #F8B737"{% endif %}>{{ i }}</span>
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="row row-n">
+          <div class="col">
+            <h1 class="col-1">
+              N
+            </h1>
+          </div>
+          {% for i in (31..45) %}
+            <div class="col">
+              <label><input
+                  type="checkbox"
+                  disabled
+                  onclick="document.getElementById('form').submit()"
+                  name="sorted"
+                  value="{{i}}"><span {% if i | hasNumber: listnumber.rows %}style="background-color: #008037; color: #F8B737"{% endif %}>{{ i }}</span>
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="row row-g">
+          <div class="col">
+            <h1 class="col-1">
+              G
+            </h1>
+          </div>
+          {% for i in (46..60) %}
+            <div class="col">
+              <label><input
+                  type="checkbox"
+                  disabled
+                  onclick="document.getElementById('form').submit()"
+                  name="sorted"
+                  value="{{i}}"><span {% if i | hasNumber: listnumber.rows %}style="background-color: #008037; color: #F8B737"{% endif %}>{{ i }}</span>
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="row row-o">
+          <div class="col">
+            <h1 class="col-1">
+              O
+            </h1>
+          </div>
+          {% for i in (61..75) %}
+            <div class="col">
+              <label><input
+                  type="checkbox"
+                  disabled
+                  onclick="document.getElementById('form').submit()"
+                  name="sorted"
+                  value="{{i}}"><span {% if i | hasNumber: listnumber.rows %}style="background-color: #008037; color: #F8B737"{% endif %}>{{ i }}</span>
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="number-sorted">
+        <p class="rows">Sorteado</p>
+        <p class="rows row-center">
+          {% if listnumber.rows[0].number <= 15 %}
+            B -
+          {% elsif listnumber.rows[0].number <= 30 %}
+            I -
+          {% elsif listnumber.rows[0].number <= 45 %}
+            N -
+          {% elsif listnumber.rows[0].number <= 60 %}
+            G -
+          {% elsif listnumber.rows[0].number <= 75 %}
+            O -
+          {% endif %}
+          {{ listnumber.rows[0].number }}
+        </p>
+        <P class="rows row-last">Últimos</P>
+
+        <div class="last-numbers-sorteds">
+        <h3 class="item item-1">
+          {% if listnumber.rows[0].number <= 15 %}
+            B -
+          {% elsif listnumber.rows[0].number <= 30 %}
+            I -
+          {% elsif listnumber.rows[0].number <= 45 %}
+            N -
+          {% elsif listnumber.rows[0].number <= 60 %}
+            G -
+          {% elsif listnumber.rows[0].number <= 75 %}
+            O -
+          {% endif %}
+          {{ listnumber.rows[1].number }}</h3>
+        <h3 class="item item-2">
+          {% if listnumber.rows[1].number <= 15 %}
+            B -
+          {% elsif listnumber.rows[1].number <= 30 %}
+            I -
+          {% elsif listnumber.rows[1].number <= 45 %}
+            N -
+          {% elsif listnumber.rows[1].number <= 60 %}
+            G -
+          {% elsif listnumber.rows[1].number <= 75 %}
+            O -
+          {% endif %}
+          {{ listnumber.rows[2].number }}</h3>
+        <h3 class="item item-3">
+          {% if listnumber.rows[2].number <= 15 %}
+            B -
+          {% elsif listnumber.rows[2].number <= 30 %}
+            I -
+          {% elsif listnumber.rows[2].number <= 45 %}
+            N -
+          {% elsif listnumber.rows[2].number <= 60 %}
+            G -
+          {% elsif listnumber.rows[2].number <= 75 %}
+            O -
+          {% endif %}
+          {{ listnumber.rows[3].number }}</h3>
+        <h3 class="item item-4">
+          {% if listnumber.rows[3].number <= 15 %}
+            B -
+          {% elsif listnumber.rows[3].number <= 30 %}
+            I -
+          {% elsif listnumber.rows[3].number <= 45 %}
+            N -
+          {% elsif listnumber.rows[3].number <= 60 %}
+            G -
+          {% elsif listnumber.rows[3].number <= 75 %}
+            O -
+          {% endif %}
+          {{ listnumber.rows[4].number }}</h3>
+      </div>
+      </div>
+      
+    </div>
+  </form>
+{% endblock %}

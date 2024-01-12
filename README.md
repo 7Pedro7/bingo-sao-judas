@@ -1,0 +1,8 @@
+# Cores padrões do projeto
+
+VERDE - #008037
+AMARELO - #F8B737
+VERMELHO - #D80100
+MARROM - #64441D
+CINZA - #919191
+BRANCO - #FFFFFF

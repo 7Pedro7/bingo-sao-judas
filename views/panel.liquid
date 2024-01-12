@@ -1,0 +1,113 @@
+{% layout 'base.liquid' %}
+
+{% block content %}
+  <!-- {% for row in listnumber.rows %}
+  {{ row['number'] }}
+  {% endfor %} --><form
+    action="/"
+    method="post"
+    id="form">
+    <div class="panel-form">
+      <div class="letter-form">
+          <h1 class="letter-form">
+            B
+          </h1>
+          <h1 class="letter-form">
+            I
+          </h1>
+          <h1 class="letter-form">
+            N
+          </h1>
+          <h1 class="letter-form">
+            G
+          </h1>
+          <h1 class="letter-form-o">
+            O
+          </h1>
+      </div>
+      <div class="col">
+        <div class="row row-form">
+          {% for i in (1..15) %}
+            <div class="col">
+              <label><input
+                  type="checkbox"
+                  onclick="document.getElementById('form').submit()"
+                  name="sorted"
+                  value="{{i}}"><span class="numbers-form" {% if i | hasNumber: listnumber.rows %}style="background-color: #008037; color: white;"{% endif %}>{{ i }}</span>
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="row row-form">
+          
+          {% for i in (16..30) %}
+            <div class="col">
+              <label><input
+                  type="checkbox"
+                  onclick="document.getElementById('form').submit()"
+                  name="sorted"
+                  value="{{i}}"><span class="numbers-form" {% if i | hasNumber: listnumber.rows %}style="background-color: #008037; color: white;"{% endif %}>{{ i }}</span>
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="row row-form">
+          
+          {% for i in (31..45) %}
+            <div class="col">
+              <label><input
+                  type="checkbox"
+                  onclick="document.getElementById('form').submit()"
+                  name="sorted"
+                  value="{{i}}"><span class="numbers-form" {% if i | hasNumber: listnumber.rows %}style="background-color: #008037; color: white;"{% endif %}>{{ i }}</span>
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="row row-form">
+          
+          {% for i in (46..60) %}
+            <div class="col">
+              <label><input
+                  type="checkbox"
+                  onclick="document.getElementById('form').submit()"
+                  name="sorted"
+                  value="{{i}}"><span class="numbers-form" {% if i | hasNumber: listnumber.rows %}style="background-color: #008037; color: white;"{% endif %}>{{ i }}</span>
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="row row-form">
+          
+          {% for i in (61..75) %}
+            <div class="col">
+              <label><input
+                  type="checkbox"
+                  onclick="document.getElementById('form').submit()"
+                  name="sorted"
+                  value="{{i}}"><span class="numbers-form" {% if i | hasNumber: listnumber.rows %}style="background-color: #008037; color: white;"{% endif %}>{{ i }}</span>
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="buttons" >
+      <a class="btn btn-dark" id="reset" type="reset" > Resetar Botões</a>
+    </div>
+    <div class="buttons">
+      <a class="btn btn-dark"href='panelsorteds' role="button">Números Sorteados</a>
+    </div>
+  </form>
+  <form
+    action="/reset"
+    method="post"
+    id="resetForm"><!-- Pode incluir campos ocultos ou outros dados aqui, se necessário -->
+  </form>
+  <script>
+    document.getElementById("reset").addEventListener("click", function(event) {
+      event.preventDefault();
+      document.getElementById("resetForm").submit();
+    });
+  </script>
+{% endblock %}

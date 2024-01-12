@@ -1,0 +1,162 @@
+body {
+    padding: 0px;
+}
+
+/* Esconde o checkbox */
+label input[type=checkbox] {
+    opacity:0;
+    display:none;
+}
+
+/* Padrão dos números */
+label span {
+    cursor: pointer;
+    border-radius: 50%;
+    height: 95px;
+    width: 95px;
+    background-color: #919191;  
+    /* border: 2px solid #F8B737; */
+    color: #c7c5c5; 
+    display: block;
+    font-size: 62px;
+    text-align: center;
+    line-height: 95px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Número selecionado */
+label input[type=checkbox]:checked + span {
+    background-color: #008037;
+    /* border: 2px solid black; */
+    color: #F8B737;
+}
+
+div[class="buttons"] {
+    margin: 20px 10px 20px 0px;
+    text-align: right;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn {
+    height: 65px;
+    background-color: #008037;
+}
+
+.panel {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    min-width: 100%;
+    margin-top: 30px;
+}
+
+.tittle {
+    color: #D80100;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 62px;
+    text-align: center;
+}
+
+.panel-numbers {
+    width: 100%;
+    height: 600px;
+    color: #D80100;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-left: 2px;
+}
+
+.col-1 {
+    font-size: 78px;
+}
+
+.number-sorted {
+    display: grid;
+    background-color: #008037;
+    width: 100%;
+    height: 202px;
+    color: #F8B737;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px ;
+    grid-template-columns: 14% 36% 12% 38% ;
+    text-align: center;
+    line-height: 202px;
+    border: 1px  solid #F8B737;
+}
+
+.rows {
+    border: 1px  solid #F8B737;
+}
+
+.row-center {
+    font-size: 170px;
+}
+
+.last-numbers-sorteds {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 101px 101px;
+}
+
+.item {
+    text-align: center;
+    margin: 0px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 92px ;
+    color: #F8B737;
+    border: 1px solid #F8B737;
+    background-color: #008037;
+    line-height: 100px;
+}
+
+/* Modelo do form desktop */
+.panel-form{
+    display: grid;
+    grid-template-columns: 3% 97%;
+    grid-template-rows: auto auto;
+    margin-top: 30px;
+}
+.letter-form {
+    font-size: 78px;
+    margin-right: 5px;
+}
+.letter-form-o{
+    font-size: 78px;
+}
+.numbers-form {
+    height: 95px;
+    width: 95px;
+    line-height: 95px;
+    margin-bottom: 5px;
+}
+
+/* Modelo do form mobile */
+@media(max-device-width: 770px) {
+    .panel-form {
+        display: grid;
+        grid-template-columns: 8% 92%;
+        grid-template-rows: auto auto;
+        margin: 10px 10px 0px 0px;
+    }
+
+    .letter-form {
+        font-size: 92px;
+        margin-bottom: 330px;
+    }
+
+    .letter-form-o {
+        font-size: 92px;
+    }
+
+    .numbers-form {
+        height: 140px;
+        width: 140px;
+        line-height: 140px;
+        font-size: 110px;
+    }
+
+    .row-form {
+        border: 2px solid black;
+    }
+}
